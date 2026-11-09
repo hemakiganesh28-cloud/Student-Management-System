@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Student Profile Management System</h1>
+        <p>Manage Student Information Easily</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Student Registration -->
+        <section class="card">
+            <h2>Student Registration</h2>
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name"
+                        placeholder="Enter Student Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="roll">Roll Number</label>
+                    <input type="text" id="roll"
+                        placeholder="Enter Roll Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                        placeholder="Enter Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department"
+                        placeholder="Enter Department" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <select id="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    Add Student
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Student Records -->
+        <section class="card records">
+            <h2>Student Records</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                class="search"
+                placeholder="Search by Name or Roll Number"
+            >
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll No</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                        <!-- Student records appear here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No student records found.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Profile Management System</p>
+        <p>Developed by HARINI P | 26BCR017</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
